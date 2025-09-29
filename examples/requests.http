@@ -1,0 +1,27 @@
+
+### Health
+GET http://localhost:8080/healthz
+
+### Create task
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "links": [
+    "https://speed.hetzner.de/10MB.bin",
+    "https://speed.hetzner.de/100MB.bin"
+  ],
+  "label": "demo",
+  "dest_dir": ""
+}
+
+### Get tasks
+GET http://localhost:8080/tasks
+
+### Get task by id
+GET http://localhost:8080/tasks/{{task_id}}
+
+### Drain / Resume
+POST http://localhost:8080/admin/drain
+
+POST http://localhost:8080/admin/resume
